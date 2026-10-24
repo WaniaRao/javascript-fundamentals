@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div>
+                <h2>Countify</h2>
+                <p>Your daily counter</p>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </header>
+
+        <div class="welcome">
+            <p>HELLO THERE 👋</p>
+            <h1>Keep counting<span>.</span></h1>
+            <p class="subtitle">Every number counts. Keep going!</p>
+        </div>
+
+        <div class="counter-card">
+            <div class="card-top">
+                <span><i class="fa-solid fa-chart-simple"></i> YOUR COUNTER</span>
+                <span class="live"><i class="fa-solid fa-circle"></i> LIVE</span>
+            </div>
+
+            <div class="number-area">
+                <p>Current value</p>
+                <h1 id="count">0</h1>
+                <span class="status">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    Start your journey
+                </span>
+            </div>
+
+            <div class="buttons">
+                <button class="control-btn minus" onclick="decrement()">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+
+                <button class="control-btn plus" onclick="increment()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+            <p class="hint">Tap the buttons to change your count</p>
+        </div>
+
+        <button class="reset-btn" onclick="reset()">
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset counter
+        </button>
+
+        <div class="info-card">
+            <div class="info-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div>
+                <h3>Stay consistent</h3>
+                <p>Small steps lead to big results.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+        </div>
+
+        <footer>
+            <i class="fa-solid fa-heart"></i> Made with care
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
