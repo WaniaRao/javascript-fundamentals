@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Events Practice</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <p class="tag">LEARN • PRACTICE • IMPROVE</p>
+            <h1>JavaScript Events Lab</h1>
+            <p class="subtitle">
+                Practice five JavaScript events with interactive examples.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="intro">
+            <h2>Practice Exercises</h2>
+            <p>
+                Try each activity, observe what happens, and understand
+                how JavaScript responds to your actions.
+            </p>
+        </div>
+
+        <!-- Question 1 -->
+        <section class="card">
+            <div class="question-number">QUESTION 01</div>
+            <h2>Background Color Changer</h2>
+
+            <p class="description">
+                Click any color button to change the background of the
+                webpage. The selected color name will also be displayed.
+            </p>
+
+            <div class="color-buttons">
+                <button class="color-btn purple"
+                        onclick="changeBackground('lavender', 'Lavender')">
+                    Lavender
+                </button>
+
+                <button class="color-btn blue"
+                        onclick="changeBackground('lightblue', 'Light Blue')">
+                    Light Blue
+                </button>
+
+                <button class="color-btn pink"
+                        onclick="changeBackground('pink', 'Pink')">
+                    Pink
+                </button>
+
+                <button class="color-btn green"
+                        onclick="changeBackground('lightgreen', 'Light Green')">
+                    Light Green
+                </button>
+
+                <button class="color-btn orange"
+                        onclick="changeBackground('peachpuff', 'Peach')">
+                    Peach
+                </button>
+            </div>
+
+            <p class="result">
+                Selected color:
+                <span id="colorName">Default</span>
+            </p>
+
+            <button class="secondary-btn" onclick="resetBackground()">
+                Reset Background
+            </button>
+        </section>
+
+
+        <!-- Question 2 -->
+        <section class="card">
+            <div class="question-number">QUESTION 02</div>
+            <h2>Double Click Challenge</h2>
+
+            <p class="description">
+                Double-click the text below to change the message.
+                You can also reset it and count how many times you double-click.
+            </p>
+
+            <div class="message-area">
+                <h3 id="message" ondblclick="changeMessage()">
+                    Double-click me!
+                </h3>
+
+                <p class="hint">
+                    Hint: Double-click the heading above.
+                </p>
+            </div>
+
+            <p class="result">
+                Double-click count:
+                <span id="clickCount">0</span>
+            </p>
+
+            <button class="secondary-btn" onclick="resetMessage()">
+                Reset Message
+            </button>
+        </section>
+
+
+        <!-- Question 3 -->
+        <section class="card">
+            <div class="question-number">QUESTION 03</div>
+            <h2>Mouseover and Mouseout</h2>
+
+            <p class="description">
+                Move your mouse over the heading to change its color and size.
+                Move the mouse away to restore its original appearance.
+            </p>
+
+            <div class="hover-area">
+                <h3 id="hoverHeading"
+                    onmouseover="changeHeading()"
+                    onmouseout="resetHeading()">
+                    Move Your Mouse Here
+                </h3>
+
+                <p id="hoverStatus">Status: Waiting for mouse</p>
+            </div>
+        </section>
+
+
+        <!-- Question 4 -->
+        <section class="card">
+            <div class="question-number">QUESTION 04</div>
+            <h2>Live Name Greeting</h2>
+
+            <p class="description">
+                Type your name in the input box. JavaScript will display
+                a greeting and update the character count as you type.
+            </p>
+
+            <label for="userInput">Enter your name</label>
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Example: Wania"
+                maxlength="40"
+                oninput="showText()"
+            >
+
+            <div class="greeting-area">
+                <h3 id="greeting">Hello, Guest!</h3>
+                <p id="output">Your name will appear here.</p>
+            </div>
+
+            <p class="result">
+                Characters typed:
+                <span id="charCount">0</span> / 40
+            </p>
+
+            <button class="secondary-btn" onclick="clearInput()">
+                Clear Name
+            </button>
+        </section>
+
+
+        <!-- Question 5 -->
+        <section class="card">
+            <div class="question-number">QUESTION 05</div>
+            <h2>Show and Hide Paragraph</h2>
+
+            <p class="description">
+                Click the button to hide the paragraph. Click again to show it.
+                The button text and status will update automatically.
+            </p>
+
+            <div class="paragraph-area">
+                <p id="myParagraph">
+                    JavaScript makes webpages interactive. It can respond to
+                    clicks, mouse movements, keyboard input, and many other
+                    user actions. Practising events helps you understand how
+                    websites respond to the people using them.
+                </p>
+            </div>
+
+            <button id="toggleBtn" onclick="toggleParagraph()">
+                Hide Paragraph
+            </button>
+
+            <p class="result">
+                Current status:
+                <span id="visibilityStatus">Visible</span>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>JavaScript Events Lab</h3>
+        <p>Keep practising. Every line of code teaches you something new.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
