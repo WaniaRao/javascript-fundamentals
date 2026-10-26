@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora — Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator">
+
+        <header class="calculator-header">
+            <div>
+                <h1 class="brand">VELORA</h1>
+                <p class="subtitle">The art of calculation</p>
+            </div>
+            <span class="header-dot"></span>
+        </header>
+
+        <section class="display" aria-label="Calculator display">
+            <div class="expression" id="expression">Ready to calculate</div>
+            <div class="result" id="result" aria-live="polite">0</div>
+        </section>
+
+        <section class="buttons" aria-label="Calculator keypad">
+
+            <button data-action="clear" type="button">AC</button>
+            <button data-action="delete" type="button">DEL</button>
+            <button data-action="percent" type="button">%</button>
+            <button data-operator="/" type="button">÷</button>
+
+            <button data-number="7" type="button">7</button>
+            <button data-number="8" type="button">8</button>
+            <button data-number="9" type="button">9</button>
+            <button data-operator="*" type="button">×</button>
+
+            <button data-number="4" type="button">4</button>
+            <button data-number="5" type="button">5</button>
+            <button data-number="6" type="button">6</button>
+            <button data-operator="-" type="button">−</button>
+
+            <button data-number="1" type="button">1</button>
+            <button data-number="2" type="button">2</button>
+            <button data-number="3" type="button">3</button>
+            <button data-operator="+" type="button">+</button>
+
+            <button data-action="sign" type="button">±</button>
+            <button data-number="0" type="button">0</button>
+            <button data-action="decimal" type="button">.</button>
+            <button data-action="equals" type="button">=</button>
+
+        </section>
+
+        <footer class="calculator-footer">
+            Designed with love <span>✦</span> Velora Studio
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
