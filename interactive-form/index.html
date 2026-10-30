@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <p class="tag">JAVASCRIPT • EVENTS</p>
+        <h1>Interactive Forms</h1>
+        <p class="hero-text">
+            Signup, Read More and Student Management
+        </p>
+    </header>
+
+    <main class="container">
+
+        <!-- TASK 1: SIGNUP FORM -->
+
+        <section class="card">
+            <div class="section-heading">
+                <span class="number">01</span>
+                <div>
+                    <h2>Signup Form</h2>
+                    <p>Submit your details to see them below.</p>
+                </div>
+            </div>
+
+            <form id="signupForm">
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName"
+                            placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword"
+                            placeholder="Enter password" required minlength="6">
+                    </div>
+
+                    <div class="field">
+                        <label for="signupPhone">Phone Number</label>
+                        <input type="tel" id="signupPhone"
+                            placeholder="Enter phone number" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Create Account
+                </button>
+            </form>
+
+            <div id="signupOutput" class="output hidden">
+                <h3>Signup Details</h3>
+                <div id="signupDetails"></div>
+            </div>
+        </section>
+
+
+        <!-- TASK 2: READ MORE -->
+
+        <section class="card">
+            <div class="section-heading">
+                <span class="number">02</span>
+                <div>
+                    <h2>Read More</h2>
+                    <p>Click the button to view complete details.</p>
+                </div>
+            </div>
+
+            <div class="article-box">
+                <span class="article-label">FEATURED ARTICLE</span>
+                <h3>Learning Web Development</h3>
+
+                <p>
+                    Web development is the process of creating websites.
+                    It includes HTML, CSS and JavaScript.
+                </p>
+
+                <p id="extraText" class="hidden">
+                    HTML creates the structure of a webpage, CSS makes
+                    it beautiful and JavaScript adds interactivity.
+                    By learning these technologies, you can create
+                    modern and responsive websites.
+                </p>
+
+                <button type="button" id="readMoreBtn" class="secondary-btn">
+                    Read More +
+                </button>
+            </div>
+        </section>
+
+
+        <!-- TASK 3: STUDENT FORM -->
+
+        <section class="card">
+            <div class="section-heading">
+                <span class="number">03</span>
+                <div>
+                    <h2>Student Management</h2>
+                    <p>Add, edit and delete student records.</p>
+                </div>
+            </div>
+
+            <form id="studentForm">
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName"
+                            placeholder="Enter student name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="studentRoll">Roll Number</label>
+                        <input type="text" id="studentRoll"
+                            placeholder="Enter roll number" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="studentClass">Class</label>
+                        <input type="text" id="studentClass"
+                            placeholder="Enter class" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="studentEmail">Email</label>
+                        <input type="email" id="studentEmail"
+                            placeholder="Enter email" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Add Student
+                </button>
+            </form>
+
+            <!-- Hidden Edit Form -->
+
+            <form id="editForm" class="edit-form hidden">
+                <h3>Edit Student Details</h3>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="editName">Student Name</label>
+                        <input type="text" id="editName" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="editRoll">Roll Number</label>
+                        <input type="text" id="editRoll" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="editClass">Class</label>
+                        <input type="text" id="editClass" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" required>
+                    </div>
+
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="primary-btn">
+                        Update Student
+                    </button>
+
+                    <button type="button" id="cancelEdit"
+                        class="cancel-btn">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <!-- Student Table -->
+
+            <div class="table-heading">
+                <h3>Student Records</h3>
+                <span id="studentCount">0 Students</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Roll No.</th>
+                            <th>Class</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                        <tr>
+                            <td colspan="6" class="empty-message">
+                                No student records yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with ♡ | JavaScript Events Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
