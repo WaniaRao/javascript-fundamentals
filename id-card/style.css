@@ -1,0 +1,455 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(135deg, #100d20, #211638, #30204c);
+    min-height: 100vh;
+    color: #fff;
+    padding: 35px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.top-label {
+    color: #c7a9ff;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #f1eaff;
+}
+
+.subtitle {
+    color: #b8a9cf;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(220, 200, 255, 0.18);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #e8d9ff;
+}
+
+form label {
+    display: block;
+    color: #d1c1e8;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #55456e;
+    border-radius: 9px;
+    background: #211832;
+    color: white;
+    outline: none;
+    margin-bottom: 17px;
+    font-family: inherit;
+}
+
+form input:focus {
+    border-color: #c6a5ff;
+    box-shadow: 0 0 0 3px rgba(198, 165, 255, 0.12);
+}
+
+form input::placeholder {
+    color: #8e80a4;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(110deg, #a77be8, #d0b3ff);
+    color: #211536;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(177, 137, 241, 0.3);
+}
+
+.preview-box {
+    text-align: center;
+}
+
+.preview-label {
+    color: #cbb3f0;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.card-scene {
+    width: 100%;
+    max-width: 390px;
+    height: 245px;
+    margin: auto;
+    perspective: 1000px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.85);
+}
+
+.card-scene.show {
+    animation: cardEntrance 1s ease forwards;
+}
+
+@keyframes cardEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.id-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.9s cubic-bezier(.2,.8,.2,1);
+}
+
+.id-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.card-front {
+    background: linear-gradient(135deg, #e9ddff, #c3a8ec);
+    color: #291a40;
+    padding: 20px;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(60, 35, 90, 0.2);
+    padding-bottom: 12px;
+}
+
+.logo, .back-logo {
+    background: #382351;
+    color: #e5d6ff;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: bold;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+}
+
+.institute-heading {
+    text-align: left;
+    min-width: 0;
+}
+
+.institute-heading h3 {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.institute-heading p {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.front-content {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 17px;
+    text-align: left;
+}
+
+.photo-frame {
+    width: 100px;
+    height: 125px;
+    flex-shrink: 0;
+    background: #d3c3ec;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.student-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.small-heading, .info-line span {
+    font-size: 8px;
+    color: #705887;
+    letter-spacing: 1px;
+}
+
+.student-info h2 {
+    font-size: 16px;
+    margin: 5px 0 12px;
+    overflow-wrap: anywhere;
+}
+
+.info-line {
+    margin-top: 7px;
+}
+
+.info-line strong {
+    display: block;
+    font-size: 11px;
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+}
+
+.card-bottom {
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: #654b82;
+}
+
+.card-back {
+    background: linear-gradient(145deg, #302044, #171124);
+    color: #eee2ff;
+    transform: rotateY(180deg);
+    padding: 20px 25px;
+    text-align: left;
+}
+
+.back-logo {
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+    margin-bottom: 12px;
+    background: #b99ae9;
+    color: #241735;
+}
+
+.card-back h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.back-subtitle {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #bba5dc;
+    margin-top: 5px;
+}
+
+.back-divider {
+    height: 1px;
+    background: #79618e;
+    margin: 12px 0;
+}
+
+.back-details p {
+    font-size: 7px;
+    letter-spacing: 2px;
+    color: #bba5dc;
+    margin-top: 7px;
+}
+
+.back-details h3 {
+    font-size: 11px;
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+}
+
+.qr-design {
+    position: absolute;
+    right: 25px;
+    bottom: 45px;
+    width: 55px;
+    height: 55px;
+    background: #e9ddff;
+    color: #302044;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-design span {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.qr-design small {
+    font-size: 6px;
+}
+
+.back-footer {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #c3a8ec;
+}
+
+.flip-btn {
+    margin-top: 35px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid #b99ae9;
+    border-radius: 30px;
+    color: #e5d6ff;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: 0.3s;
+}
+
+.flip-btn.show {
+    animation: buttonAppear 0.7s ease 0.2s forwards;
+}
+
+@keyframes buttonAppear {
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+.flip-btn:hover {
+    background: #b99ae9;
+    color: #211536;
+}
+
+.flip-btn span {
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+.hint {
+    color: #a99abf;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 55px;
+    color: #a99abf;
+    font-size: 12px;
+}
+
+footer span {
+    color: #d9a5ff;
+}
+
+@media (max-width: 750px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .form-box {
+        padding: 23px;
+    }
+
+    .card-scene {
+        max-width: 360px;
+        height: 235px;
+    }
+}
+
+@media (max-width: 390px) {
+    .card-front {
+        padding: 15px;
+    }
+
+    .front-content {
+        gap: 10px;
+    }
+
+    .photo-frame {
+        width: 85px;
+        height: 115px;
+    }
+
+    .student-info h2 {
+        font-size: 13px;
+    }
+
+    .info-line strong {
+        font-size: 10px;
+    }
+}

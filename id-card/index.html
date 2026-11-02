@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium ID Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <p class="top-label">STUDENT PORTAL</p>
+            <h1>ID Card Generator</h1>
+            <p class="subtitle">Create your personal student identity card</p>
+        </header>
+
+        <div class="main-content">
+
+            <div class="form-box">
+                <h2>Enter Your Details</h2>
+
+                <form id="studentForm">
+
+                    <label>Student Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+
+                    <label>Roll Number</label>
+                    <input type="text" id="roll" placeholder="Enter roll number" required>
+
+                    <label>Course</label>
+                    <input type="text" id="course" placeholder="Enter your course" required>
+
+                    <label>Institute</label>
+                    <input type="text" id="institute" placeholder="Enter institute name" required>
+
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter phone number" required>
+
+                    <label>Photo URL</label>
+                    <input type="url" id="photo" placeholder="Paste image URL">
+
+                    <button type="submit" class="generate-btn">
+                        Generate ID Card
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="preview-box">
+                <p class="preview-label">YOUR IDENTITY CARD</p>
+
+                <div class="card-scene" id="cardScene">
+
+                    <div class="id-card" id="idCard">
+
+                        <!-- FRONT SIDE -->
+                        <div class="card-face card-front">
+
+                            <div class="card-top">
+                                <div class="logo">ID.</div>
+                                <div class="institute-heading">
+                                    <h3 id="frontInstitute">YOUR INSTITUTE</h3>
+                                    <p>STUDENT IDENTITY CARD</p>
+                                </div>
+                            </div>
+
+                            <div class="front-content">
+
+                                <div class="photo-frame">
+                                    <img id="studentPhoto"
+                                    src="https://placehold.co/150x180/ddd6f3/35245c?text=PHOTO"
+                                    alt="Student Photo">
+                                </div>
+
+                                <div class="student-info">
+                                    <p class="small-heading">STUDENT NAME</p>
+                                    <h2 id="cardName">Your Name</h2>
+
+                                    <div class="info-line">
+                                        <span>ROLL NO.</span>
+                                        <strong id="cardRoll">0000</strong>
+                                    </div>
+
+                                    <div class="info-line">
+                                        <span>COURSE</span>
+                                        <strong id="cardCourse">Your Course</strong>
+                                    </div>
+
+                                    <div class="info-line">
+                                        <span>PHONE</span>
+                                        <strong id="cardPhone">0000000000</strong>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="card-bottom">
+                                <span>OFFICIAL STUDENT CARD</span>
+                                <span>2026 — 2027</span>
+                            </div>
+
+                        </div>
+
+                        <!-- BACK SIDE -->
+                        <div class="card-face card-back">
+
+                            <div class="back-logo">ID.</div>
+
+                            <h2>STUDENT IDENTITY</h2>
+                            <p class="back-subtitle">OFFICIAL INSTITUTE CARD</p>
+
+                            <div class="back-divider"></div>
+
+                            <div class="back-details">
+                                <p>INSTITUTE</p>
+                                <h3 id="backInstitute">Your Institute</h3>
+
+                                <p>STUDENT NAME</p>
+                                <h3 id="backName">Your Name</h3>
+
+                                <p>ROLL NUMBER</p>
+                                <h3 id="backRoll">0000</h3>
+                            </div>
+
+                            <div class="qr-design">
+                                <span>▦</span>
+                                <small>STUDENT ID</small>
+                            </div>
+
+                            <div class="back-footer">
+                                PLEASE RETURN IF FOUND
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <button id="flipBtn" class="flip-btn">
+                    <span>↻</span> Flip ID Card
+                </button>
+
+                <p class="hint">Click the button to view the back side</p>
+
+            </div>
+
+        </div>
+
+        <footer>
+            Designed with creativity <span>♥</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
