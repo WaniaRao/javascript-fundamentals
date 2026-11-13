@@ -1,0 +1,1105 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f8f6;
+    color: #1e2d27;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: #ffffff;
+    padding: 18px 8%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e2d27;
+}
+
+.logo span {
+    color: #e76f51;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #34443d;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #e76f51;
+}
+
+.nav-btn {
+    background: #e76f51;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+.nav-btn i {
+    margin-left: 5px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.fitness-hero {
+    min-height: 650px;
+    background: #eaf1ed;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    gap: 50px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-tag,
+.section-tag {
+    color: #e76f51;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin: 18px 0;
+    color: #1e2d27;
+}
+
+.hero-content h1 span {
+    color: #e76f51;
+}
+
+.hero-content p {
+    max-width: 500px;
+    color: #64736b;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn {
+    background: #e76f51;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+.secondary-btn {
+    color: #1e2d27;
+    font-size: 13px;
+    padding: 13px 10px;
+}
+
+.secondary-btn i {
+    color: #e76f51;
+    margin-right: 5px;
+}
+
+
+/* HERO STATS */
+
+.hero-stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.hero-stat h3 {
+    font-size: 22px;
+    color: #1e2d27;
+}
+
+.hero-stat p {
+    font-size: 11px;
+    margin: 3px 0;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    width: 50%;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 25px;
+    left: -25px;
+
+    background: white;
+    padding: 14px 18px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.floating-icon {
+    background: #fff0ec;
+    color: #e76f51;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-card span {
+    font-size: 11px;
+    color: #64736b;
+}
+
+.floating-card h4 {
+    font-size: 14px;
+    color: #1e2d27;
+}
+
+/* =========================
+   FITNESS GOALS
+========================= */
+
+.fitness-goals {
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: auto auto 45px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: #1e2d27;
+    margin: 12px 0;
+}
+
+.section-heading h2 span {
+    color: #e76f51;
+}
+
+.section-heading p {
+    color: #64736b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* GOAL CARDS */
+
+.goals-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.goal-card {
+    background: #f7f8f6;
+    padding: 30px 22px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.goal-icon {
+    width: 50px;
+    height: 50px;
+    background: #fff0ec;
+    color: #e76f51;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.goal-card h3 {
+    font-size: 18px;
+    color: #1e2d27;
+    margin-bottom: 10px;
+}
+
+.goal-card p {
+    font-size: 12px;
+    color: #64736b;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.goal-link {
+    color: #e76f51;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.goal-link i {
+    margin-left: 5px;
+}
+
+.goal-bottom-text {
+    text-align: center;
+    margin-top: 35px;
+    color: #64736b;
+    font-size: 13px;
+}
+
+.goal-bottom-text i,
+.goal-bottom-text span {
+    color: #e76f51;
+}
+
+
+/* =========================
+   WORKOUT SECTION
+========================= */
+
+.workouts-section {
+    padding: 90px 8%;
+    background: #eaf1ed;
+}
+
+.workouts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* WORKOUT CARD */
+
+.workout-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.workout-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.workout-image {
+    position: relative;
+}
+
+.workout-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.workout-level {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    background: #e76f51;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 15px;
+
+    font-size: 10px;
+}
+
+.workout-content {
+    padding: 22px;
+}
+
+.workout-icon {
+    color: #e76f51;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.workout-content h3 {
+    color: #1e2d27;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.workout-content p {
+    color: #64736b;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.workout-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+    font-size: 10px;
+    color: #64736b;
+}
+
+.workout-info i {
+    color: #e76f51;
+    margin-right: 4px;
+}
+
+.workout-btn {
+    display: inline-block;
+    color: #e76f51;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.workout-btn i {
+    margin-left: 5px;
+}
+
+
+/* VIEW PROGRAM BUTTON */
+
+.view-programs {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.view-programs-btn {
+    display: inline-block;
+    border: 1px solid #e76f51;
+    color: #e76f51;
+
+    padding: 12px 22px;
+    border-radius: 25px;
+
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.view-programs-btn:hover {
+    background: #e76f51;
+    color: white;
+}
+
+.view-programs-btn i {
+    margin-left: 5px;
+}
+
+/* =========================
+   TRAINERS SECTION
+========================= */
+
+.trainers-section {
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.trainers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.trainer-card {
+    background: #f7f8f6;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 22px;
+    transition: 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.trainer-card h3 {
+    font-size: 18px;
+    color: #1e2d27;
+}
+
+.trainer-card > p {
+    color: #e76f51;
+    font-size: 13px;
+    margin: 6px 0 10px;
+}
+
+.trainer-info {
+    color: #64736b;
+    font-size: 11px;
+}
+
+
+/* =========================
+   FITNESS CTA
+========================= */
+
+.fitness-cta {
+    padding: 80px 8%;
+    background: #1e2d27;
+    text-align: center;
+}
+
+.fitness-cta h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.fitness-cta p {
+    color: #c4cec8;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.join-btn {
+    display: inline-block;
+    background: #e76f51;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+.join-btn i {
+    margin-left: 6px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.fitness-footer {
+    background: #15211c;
+    color: white;
+    padding: 55px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.footer-brand {
+    max-width: 280px;
+}
+
+.footer-brand h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-brand h2 span {
+    color: #e76f51;
+}
+
+.footer-brand p {
+    color: #aeb8b2;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-content h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #aeb8b2;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #e76f51;
+}
+
+.footer-social > div {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 35px;
+    height: 35px;
+    background: #26362f;
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #304038;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: #8e9a93;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .fitness-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .goals-container,
+    .workouts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .fitness-hero {
+        padding: 60px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .goals-container,
+    .workouts-container,
+    .trainers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        gap: 18px;
+    }
+
+    .hero-image img {
+        height: 400px;
+    }
+
+    .floating-card {
+        left: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .fitness-cta h2 {
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   BUTTON TRANSFORM EFFECTS
+========================= */
+
+.nav-btn,
+.primary-btn,
+.secondary-btn,
+.goal-link,
+.workout-btn,
+.view-programs-btn,
+.join-btn,
+.footer-social a {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Transform */
+
+.nav-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.goal-link:hover,
+.workout-btn:hover,
+.view-programs-btn:hover,
+.join-btn:hover,
+.footer-social a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Click Transform */
+
+.nav-btn:active,
+.primary-btn:active,
+.secondary-btn:active,
+.goal-link:active,
+.workout-btn:active,
+.view-programs-btn:active,
+.join-btn:active,
+.footer-social a:active {
+    transform: scale(0.94);
+}
+
+
+/* ===== CUSTOM FITNESS POPUP ===== */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(12, 28, 21, 0.72);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    padding: 20px;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fitness-popup {
+    width: 100%;
+    max-width: 390px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 35px 28px;
+    text-align: center;
+    position: relative;
+    transform: translateY(35px) scale(0.85);
+    transition: 0.35s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.popup-overlay.active .fitness-popup {
+    transform: translateY(0) scale(1);
+}
+
+.popup-close {
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    border: none;
+    background: #f1f3f0;
+    color: #1e2d27;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 21px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-close:hover {
+    background: #e76f51;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.popup-icon {
+    width: 75px;
+    height: 75px;
+    background: #fff0ec;
+    color: #e76f51;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 20px;
+    animation: popupBounce 0.6s ease;
+}
+
+.fitness-popup h2 {
+    color: #1e2d27;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.fitness-popup p {
+    color: #64736b;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 23px;
+}
+
+.popup-ok {
+    border: none;
+    background: #e76f51;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-ok:hover {
+    background: #1e2d27;
+    transform: scale(1.07);
+}
+
+@keyframes popupBounce {
+    0% {
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .fitness-popup {
+        padding: 32px 20px;
+    }
+
+    .fitness-popup h2 {
+        font-size: 20px;
+    }
+}
+
+/* HERO HOVER IMAGE SLIDER */
+
+.hero-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hero-image > img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero-hover-track {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.hero-image:hover .hero-hover-track {
+    opacity: 1;
+}
+
+.hero-hover-track img {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@media (max-width: 600px) {
+    .hero-image > img {
+        height: 400px;
+    }
+}
+
+
+/* =========================
+   DARK / LIGHT MODE BUTTON
+========================= */
+
+.theme-toggle {
+    background: #f1f3f0;
+    color: #1e2d27;
+    border: 1px solid #dce3dd;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.theme-toggle i {
+    margin-right: 6px;
+}
+
+.theme-toggle:hover {
+    background: #e76f51;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   DARK MODE THEME
+========================= */
+
+body,
+.navbar,
+.fitness-hero,
+.fitness-goals,
+.trainers-section,
+.goal-card,
+.trainer-card,
+.floating-card,
+.fitness-popup {
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+    background: #101820;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+
+body.dark-mode .navbar {
+    background: #18232e;
+}
+
+body.dark-mode .logo,
+body.dark-mode .nav-links a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .theme-toggle {
+    background: #263545;
+    color: #ffffff;
+    border-color: #405064;
+}
+
+/* Hero */
+
+body.dark-mode .fitness-hero {
+    background: #1b2935;
+}
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-stat h3,
+body.dark-mode .secondary-btn {
+    color: #ffffff;
+}
+
+body.dark-mode .hero-content p,
+body.dark-mode .hero-stat p {
+    color: #b7c3ce;
+}
+
+body.dark-mode .floating-card {
+    background: #263545;
+}
+
+body.dark-mode .floating-card h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .floating-card span {
+    color: #bdc8d2;
+}
+
+/* Fitness Goals */
+
+body.dark-mode .fitness-goals,
+body.dark-mode .trainers-section {
+    background: #101820;
+}
+
+body.dark-mode .section-heading h2,
+body.dark-mode .goal-card h3,
+body.dark-mode .trainer-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .section-heading p,
+body.dark-mode .goal-card p,
+body.dark-mode .goal-bottom-text,
+body.dark-mode .trainer-info {
+    color: #b7c3ce;
+}
+
+body.dark-mode .goal-card,
+body.dark-mode .trainer-card {
+    background: #1b2935;
+}
+
+/* Workouts */
+
+body.dark-mode .workouts-section {
+    background: #18232e;
+}
+
+body.dark-mode .workout-card {
+    background: #263545;
+}
+
+body.dark-mode .workout-content h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .workout-content p,
+body.dark-mode .workout-info {
+    color: #bdc8d2;
+}
+
+/* Popup */
+
+body.dark-mode .fitness-popup {
+    background: #1b2935;
+}
+
+body.dark-mode .fitness-popup h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .fitness-popup p {
+    color: #bdc8d2;
+}
+
+body.dark-mode .popup-close {
+    background: #263545;
+    color: white;
+}
+
+/* CTA and Footer */
+
+body.dark-mode .fitness-cta {
+    background: #263545;
+}
+
+body.dark-mode .fitness-footer {
+    background: #0b1118;
+}
+
+
+/* Smooth Theme Transition */
+
+body,
+body * {
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.3s;
+}
