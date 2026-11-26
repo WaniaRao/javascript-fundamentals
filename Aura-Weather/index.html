@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span>☀</span>
+                <h2>Aura Weather</h2>
+            </div>
+
+            <button class="location-btn" id="locationBtn">
+                📍 My Location
+            </button>
+        </header>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Search city..."
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <p id="message"></p>
+
+        <!-- Main Weather -->
+        <section class="main-weather">
+
+            <div class="weather-top">
+                <div>
+                    <p class="small-text">CURRENT WEATHER</p>
+                    <h1 id="cityName">Karachi</h1>
+                    <p id="date">Loading date...</p>
+                </div>
+
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+            </div>
+
+            <div class="temperature">
+                <h1 id="temperature">--°</h1>
+                <div>
+                    <h3 id="weatherDescription">Loading...</h3>
+                    <p>Feels like <span id="feelsLike">--°</span></p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail-card">
+                    <span>💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌬️</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="wind">-- km/h</h3>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span>👁️</span>
+                    <div>
+                        <p>Visibility</p>
+                        <h3 id="visibility">-- km</h3>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌡️</span>
+                    <div>
+                        <p>Precipitation</p>
+                        <h3 id="rain">-- mm</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Forecast -->
+        <section class="forecast-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="small-text">UPCOMING DAYS</p>
+                    <h2>5-Day Forecast</h2>
+                </div>
+                <span>📅</span>
+            </div>
+
+            <div class="forecast-list" id="forecastList">
+                <p>Loading forecast...</p>
+            </div>
+
+        </section>
+
+        <!-- Sunrise Sunset -->
+        <section class="sun-section">
+
+            <div class="sun-card">
+                <span>🌅</span>
+                <div>
+                    <p>Sunrise</p>
+                    <h3 id="sunrise">--:--</h3>
+                </div>
+            </div>
+
+            <div class="sun-card">
+                <span>🌇</span>
+                <div>
+                    <p>Sunset</p>
+                    <h3 id="sunset">--:--</h3>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Made with 💜 by Aura Weather</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

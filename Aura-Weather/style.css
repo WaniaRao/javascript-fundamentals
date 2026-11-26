@@ -1,0 +1,385 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #090d20, #171b3b, #29204c);
+    color: white;
+    padding: 35px 20px;
+}
+
+.app {
+    max-width: 1050px;
+    margin: auto;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    font-size: 32px;
+    color: #c39aff;
+}
+
+.logo h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.location-btn {
+    padding: 12px 18px;
+    background: rgba(255,255,255,0.09);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Search */
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box input::placeholder {
+    color: #aaa9c1;
+}
+
+.search-box input:focus {
+    border-color: #ad81ff;
+}
+
+.search-box button {
+    padding: 0 25px;
+    background: linear-gradient(135deg, #9460f5, #c27bff);
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#message {
+    min-height: 22px;
+    margin-bottom: 12px;
+    color: #ffaaaa;
+    font-size: 14px;
+}
+
+/* Main Weather */
+
+.main-weather {
+    padding: 35px;
+    border-radius: 24px;
+    background: linear-gradient(120deg, #6650a7, #403e85, #292c65);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.13);
+    margin-bottom: 25px;
+}
+
+.weather-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-text {
+    color: #c5b9ee;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.weather-top h1 {
+    font-size: 32px;
+    margin-bottom: 7px;
+}
+
+#date {
+    color: #d3ccef;
+    font-size: 14px;
+}
+
+.weather-icon {
+    font-size: 85px;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.2));
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 25px 0 35px;
+}
+
+.temperature h1 {
+    font-size: 85px;
+    font-weight: 300;
+}
+
+.temperature h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.temperature p {
+    color: #d5d0ed;
+    font-size: 14px;
+}
+
+/* Details */
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.detail-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 15px;
+}
+
+.detail-card > span {
+    font-size: 25px;
+}
+
+.detail-card p {
+    color: #c9c5e2;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.detail-card h3 {
+    font-size: 16px;
+}
+
+/* Forecast */
+
+.forecast-section {
+    padding: 30px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 22px;
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 23px;
+}
+
+.section-heading > span {
+    font-size: 27px;
+}
+
+.forecast-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.forecast-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.09);
+    padding: 20px 10px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-6px);
+    background: rgba(151,110,255,0.2);
+}
+
+.forecast-card p {
+    color: #c9c2df;
+    font-size: 13px;
+}
+
+.forecast-icon {
+    font-size: 31px;
+    margin: 14px 0;
+}
+
+.forecast-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.forecast-card small {
+    color: #bdb4d6;
+}
+
+/* Sunrise Sunset */
+
+.sun-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sun-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+}
+
+.sun-card > span {
+    font-size: 35px;
+}
+
+.sun-card p {
+    color: #c9c2df;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.sun-card h3 {
+    font-size: 21px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: #aaa5c2;
+    font-size: 13px;
+    padding: 30px 0 5px;
+}
+
+/* Responsive */
+
+@media(max-width: 750px) {
+
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forecast-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .logo h2 {
+        font-size: 19px;
+    }
+
+    .location-btn {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .main-weather {
+        padding: 22px 16px;
+    }
+
+    .weather-top h1 {
+        font-size: 25px;
+    }
+
+    .weather-icon {
+        font-size: 60px;
+    }
+
+    .temperature h1 {
+        font-size: 65px;
+    }
+
+    .temperature {
+        gap: 12px;
+    }
+
+    .temperature h3 {
+        font-size: 15px;
+    }
+
+    .detail-card {
+        padding: 12px 8px;
+        gap: 8px;
+    }
+
+    .detail-card h3 {
+        font-size: 13px;
+    }
+
+    .forecast-section {
+        padding: 20px 12px;
+    }
+
+    .forecast-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sun-section {
+        gap: 10px;
+    }
+
+    .sun-card {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .sun-card h3 {
+        font-size: 16px;
+    }
+
+}
