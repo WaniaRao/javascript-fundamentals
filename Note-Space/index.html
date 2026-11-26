@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteSpace - Your Little Ideas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">✿</div>
+                <span>NoteSpace</span>
+            </div>
+
+            <p class="sidebar-label">MENU</p>
+
+            <button class="side-link active" id="allNotesBtn">
+                <span>▤</span> All Notes
+                <span class="side-count" id="allCount">0</span>
+            </button>
+
+            <button class="side-link" id="pinnedNotesBtn">
+                <span>✦</span> Pinned
+                <span class="side-count" id="pinnedCount">0</span>
+            </button>
+
+            <div class="sidebar-bottom">
+                <div class="mini-card">
+                    <div class="mini-flower">✿</div>
+                    <h3>A little reminder</h3>
+                    <p>Your thoughts deserve a beautiful space.</p>
+                </div>
+                <p class="sidebar-footer">Made with love ♡</p>
+            </div>
+        </aside>
+
+
+        <!-- Main Area -->
+        <main class="main">
+
+            <header class="topbar">
+                <div class="welcome">
+                    <p class="eyebrow">YOUR PERSONAL SPACE</p>
+                    <h1 id="pageTitle">My Notes <span>✿</span></h1>
+                    <p class="welcome-text">Collect your thoughts, one note at a time.</p>
+                </div>
+
+                <button class="add-note-btn" id="openModalBtn">
+                    <span>+</span> New Note
+                </button>
+            </header>
+
+
+            <!-- Search and Stats -->
+            <section class="toolbar">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput" placeholder="Search your notes...">
+                </div>
+
+                <div class="notes-total">
+                    <span class="total-dot"></span>
+                    <span id="totalText">0 notes saved</span>
+                </div>
+            </section>
+
+
+            <!-- Notes Area -->
+            <section class="notes-section">
+                <div class="section-top">
+                    <div>
+                        <p class="eyebrow">YOUR COLLECTION</p>
+                        <h2 id="sectionTitle">All your thoughts</h2>
+                    </div>
+                    <p class="section-hint">Little ideas, big dreams ♡</p>
+                </div>
+
+                <div class="notes-grid" id="notesGrid"></div>
+
+            </section>
+
+            <footer>
+                <p>Take a breath. Write it down. <span>♡</span></p>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- Add/Edit Note Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="modal">
+
+            <div class="modal-header">
+                <div>
+                    <p class="eyebrow">A FRESH PAGE</p>
+                    <h2 id="modalTitle">Create a Note</h2>
+                </div>
+                <button class="close-btn" id="closeModalBtn">×</button>
+            </div>
+
+            <form id="noteForm">
+
+                <label for="noteTitle">Note Title</label>
+                <input type="text" id="noteTitle" placeholder="Give your note a title..." required maxlength="60">
+
+                <label for="noteContent">Your Thoughts</label>
+                <textarea id="noteContent" placeholder="Write something lovely..." required></textarea>
+
+                <div class="color-heading">
+                    <label>Choose a color</label>
+                    <span>Pick your mood ♡</span>
+                </div>
+
+                <div class="color-options">
+                    <label class="color-choice lavender">
+                        <input type="radio" name="noteColor" value="lavender" checked>
+                        <span></span>
+                    </label>
+
+                    <label class="color-choice pink">
+                        <input type="radio" name="noteColor" value="pink">
+                        <span></span>
+                    </label>
+
+                    <label class="color-choice peach">
+                        <input type="radio" name="noteColor" value="peach">
+                        <span></span>
+                    </label>
+
+                    <label class="color-choice mint">
+                        <input type="radio" name="noteColor" value="mint">
+                        <span></span>
+                    </label>
+
+                    <label class="color-choice yellow">
+                        <input type="radio" name="noteColor" value="yellow">
+                        <span></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="save-btn" id="saveNoteBtn">Save Note ✿</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
