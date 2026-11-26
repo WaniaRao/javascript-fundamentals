@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Online Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="quiz-box" id="quizBox">
+
+            <div class="header">
+                <h2>QuizMaster</h2>
+                <span class="quiz-label">GENERAL KNOWLEDGE</span>
+            </div>
+
+            <div class="progress-info">
+                <span id="questionNumber">Question 1 of 20</span>
+                <span id="score">Score: 0</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <h1 id="question">Question goes here?</h1>
+
+            <div id="options" class="options"></div>
+
+            <div class="buttons">
+                <button id="previousBtn" onclick="previousQuestion()">Previous</button>
+                <button id="nextBtn" onclick="nextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+
+        <div class="result-box" id="resultBox">
+            <div class="result-icon">🏆</div>
+            <h1>Quiz Completed!</h1>
+            <p>Your final score is:</p>
+            <h2 id="finalScore">0 / 20</h2>
+            <p id="resultMessage"></p>
+            <button onclick="restartQuiz()">Try Again</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
