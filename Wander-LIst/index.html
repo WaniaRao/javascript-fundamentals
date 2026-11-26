@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderList | Travel Bucket List</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-compass-fill"></i> wander<span>list.</span>
+            </a>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <span class="nav-note d-none d-sm-inline">YOUR NEXT ADVENTURE STARTS HERE</span>
+                <button class="btn add-nav-btn" data-bs-toggle="modal" data-bs-target="#addModal">
+                    <i class="bi bi-plus-lg"></i> Add Place
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7">
+                    <span class="eyebrow"><i class="bi bi-globe-americas"></i> YOUR PERSONAL TRAVEL JOURNAL</span>
+                    <h1>Collect places.<br><span>Collect memories.</span></h1>
+                    <p class="hero-text">
+                        Keep track of the places you dream of visiting.
+                        Your next great adventure is just one destination away.
+                    </p>
+                    <button class="btn hero-btn" data-bs-toggle="modal" data-bs-target="#addModal">
+                        Add your first destination <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-photo">
+                        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=85" alt="Beautiful travel destination">
+                        <div class="photo-label">
+                            <span>THE WORLD IS WAITING</span>
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container stats-section">
+        <div class="row g-3">
+            <div class="col-6 col-md-4">
+                <div class="stat-card">
+                    <div class="stat-icon coral"><i class="bi bi-map"></i></div>
+                    <div>
+                        <p>Total destinations</p>
+                        <h3 id="totalCount">0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="bi bi-check2-circle"></i></div>
+                    <div>
+                        <p>Places explored</p>
+                        <h3 id="visitedCount">0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="stat-card progress-stat">
+                    <div class="stat-icon yellow"><i class="bi bi-stars"></i></div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between">
+                            <p>Your travel progress</p>
+                            <strong id="progressText">0%</strong>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <main class="container destination-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">THE PLACES YOU LOVE</span>
+                <h2>Your travel list<span>.</span></h2>
+                <p class="section-subtitle">Every destination has a story waiting to happen.</p>
+            </div>
+        </div>
+
+        <!-- Search and filters -->
+        <div class="filter-area">
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" id="searchInput" placeholder="Search a city or country...">
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All places</button>
+                <button class="filter-btn" data-filter="want">Want to visit</button>
+                <button class="filter-btn" data-filter="visited">Visited</button>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row g-4" id="destinationList"></div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon"><i class="bi bi-airplane"></i></div>
+            <h4>No destinations found</h4>
+            <p>Add a place to start building your travel bucket list.</p>
+            <button class="btn hero-btn" data-bs-toggle="modal" data-bs-target="#addModal">
+                <i class="bi bi-plus-lg"></i> Add destination
+            </button>
+        </div>
+    </main>
+
+    <!-- Add Destination Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <div>
+                        <span class="eyebrow">A NEW ADVENTURE</span>
+                        <h4 class="modal-title">Add a destination</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="destinationForm">
+                        <div class="mb-3">
+                            <label class="form-label">Destination name</label>
+                            <input type="text" class="form-control" id="placeName" placeholder="e.g. Santorini" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" id="cityName" placeholder="e.g. Oia" required>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Country</label>
+                                <input type="text" class="form-control" id="countryName" placeholder="e.g. Greece" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Image URL <span>(optional)</span></label>
+                            <input type="url" class="form-control" id="imageUrl" placeholder="Paste an image link">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Your travel note</label>
+                            <textarea class="form-control" id="travelNote" rows="3" placeholder="Why do you want to visit this place?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn modal-submit w-100">
+                            Save destination <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
